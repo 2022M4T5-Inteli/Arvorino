@@ -1,4 +1,4 @@
-// CÓDIGO DO SERVIDOR
+// CÓDIGO DO SERVIDOR - CRUD
 
 // importa bibliotecas necessárias
 const express = require('express'); 
@@ -19,9 +19,10 @@ app.use(express.json());
 const DBPATH = 'arvorino.db'
 
 
-/* DEFINIÇÃO DOS ENDPOINTS */
+/* ================================================ DEFINIÇÃO DOS ENDPOINTS ==============================================*/
 
-// NETWORKS - checar registros cadastros na tabela NETWORK
+/*T A B E L A   R E G I S T R O S*/
+// Read - Tabela registros
 app.get('/registros', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -38,8 +39,8 @@ app.get('/registros', (req, res) => {
 });
 
 
-// NETWORKINSERT - inserir novos registros na tabela NETWORK
-app.post('/registroinsert', urlencodedParser, (req, res) => {
+// Insert - Tabela registros
+app.post('/registro/insert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	// insere valores de nome e tipo segundo a request enviada pelo cliente
@@ -54,6 +55,25 @@ app.post('/registroinsert', urlencodedParser, (req, res) => {
 	res.end();
 });
 
+//Delete - Tabela registros
+app.post("/registro/delete", urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
+	const sql = "DELETE FROM registro WHERE Horario =?";
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	var params = req.body.Horario;
+	db.run(sql, params, function (err) {
+	  if (err) return console.error(err.message);
+	});
+  
+	db.close();
+	res.end();
+  });
+
+
+/* T A B E L A   J A N E L A S*/
+
+// Read - Tabela Janela
 app.get('/janelas', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -69,8 +89,8 @@ app.get('/janelas', (req, res) => {
 	db.close(); 
 });
 
-// NETWORKINSERT - inserir novos registros na tabela NETWORK
-app.post('/janelainsert', urlencodedParser, (req, res) => {
+// Insert - Tabela Janela
+app.post('/janela/insert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	// insere valores de nome e tipo segundo a request enviada pelo cliente
@@ -85,6 +105,25 @@ app.post('/janelainsert', urlencodedParser, (req, res) => {
 	res.end();
 });
 
+//Delete - Tabela Janela
+app.post("/janela/delete", urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
+	const sql = "DELETE FROM Janela WHERE id_janela =?";
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	var params = req.body.id_janela;
+	db.run(sql, params, function (err) {
+	  if (err) return console.error(err.message);
+	});
+  
+	db.close();
+	res.end();
+  });
+
+
+/*T A B E L A  E S T U F A*/
+
+//Read - Tabela Estufas
 app.get('/estufas', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -100,8 +139,8 @@ app.get('/estufas', (req, res) => {
 	db.close(); 
 });
 
-// NETWORKINSERT - inserir novos registros na tabela NETWORK
-app.post('/estufainsert', urlencodedParser, (req, res) => {
+// Insert - Tebela Estufas
+app.post('/estufa/insert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	// insere valores de nome e tipo segundo a request enviada pelo cliente
@@ -116,6 +155,40 @@ app.post('/estufainsert', urlencodedParser, (req, res) => {
 	res.end();
 });
 
+// Delete - Tabela Estufas
+app.post("/estufas/delete", urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
+	const sql = "DELETE FROM Estufa WHERE sensor =?";
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	var params = req.body.sensor;
+	db.run(sql, params, function (err) {
+	  if (err) return console.error(err.message);
+	});
+  
+	db.close();
+	res.end();
+  });
+
+//Update - Tabela Estufas
+app.post('/estufa/update', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*');
+	// permite alterar o nome e o tipo dado certo id (chave primária)
+	sql = "UPDATE Estufa SET sensor = '" + req.body.sensor , "' WHERE id = " + req.body.id;
+	var db = new sqlite3.Database(DBPATH);
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	db.close();
+});
+
+/*T A B E L A   S T A T U S_J A N E L A*/
+
+//Read - Tabela Status_Janela
 app.get('/statusjanelas', (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
@@ -131,8 +204,8 @@ app.get('/statusjanelas', (req, res) => {
 	db.close(); 
 });
 
-// NETWORKINSERT - inserir novos registros na tabela NETWORK
-app.post('/statusjanelainsert', urlencodedParser, (req, res) => {
+// Insert - Tabela Status_Janela
+app.post('/statusjanela/insert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	// insere valores de nome e tipo segundo a request enviada pelo cliente
@@ -147,7 +220,22 @@ app.post('/statusjanelainsert', urlencodedParser, (req, res) => {
 	res.end();
 });
 
-/* Inicia o servidor */
+//Delete - Tabela Status_Janela
+app.post("/statusjanela/delete", urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
+	const sql = "DELETE FROM Status_Janela WHERE id =?";
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	var params = req.body.id;
+	db.run(sql, params, function (err) {
+	  if (err) return console.error(err.message);
+	});
+  
+	db.close();
+	res.end();
+  });
+
+/* ============Inicia o servidor ==============*/
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
   });
