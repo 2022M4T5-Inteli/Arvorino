@@ -18,6 +18,8 @@ body {
   
 .btn1 {
     border-radius: 12px;
+    width: 150px;
+    margin: auto;
 }
 
 .btn2 {
@@ -45,6 +47,12 @@ h3 {
 h4 {
     font-family: myFirstFont;
     color:white;
+}
+
+.ticones{
+    font-family: myFirstFont;
+    color:white;
+    font-size: 18pt;
 }
 
 
