@@ -29,9 +29,9 @@ h2 {
 }
 
 .skill{
-    width: 200px;
     height: 160px;
     position: relative;
+    margin: auto;
 }
 .outer{
     height: 160px;
