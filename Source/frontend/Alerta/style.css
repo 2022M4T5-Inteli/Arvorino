@@ -1,0 +1,116 @@
+  /* Google Fonts - Poppins */
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  section {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #e3f2fd;
+  }
+  button {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 14px 22px;
+    border: none;
+    background: #4070f4;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #265df2;
+  }
+  button.show-modal,
+  .modal-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  section.active .show-modal {
+    display: none;
+  }
+  .overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+  }
+  section.active .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 24px;
+    background-color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(1.2);
+    margin: auto;
+  }
+  section.active .modal-box {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-box h2 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .modal-box .buttons {
+    margin-top: 25px;
+  }
+  .modal-box button {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 0 10px;
+  }
+  
+.circuloTemp {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+
+    font: 32px Arial, sans-serif;
+}
+
+.circuloUmid {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+
+    font: 32px Arial, sans-serif;
+}
+   
