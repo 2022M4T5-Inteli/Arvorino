@@ -23,6 +23,15 @@
 
 a{
   text-decoration: none;
+  color: snow;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h3{
+  margin: 0px;
 }
 
 body{
@@ -56,6 +65,22 @@ body{
     width: max-content;
     left: 90%;
   }
+
+  .navbar .Home:hover{
+    background: #f8f4f365;
+  }
+
+  .navbar .Info{
+    font-family: font1;
+    color: snow;
+    position: absolute;
+    width: max-content;
+    left: 80%;
+  }
+
+  .navbar .Info:hover{
+    background: #f8f4f365;
+  } 
 
   .navbar .menu{
     max-width:30px;
@@ -94,18 +119,81 @@ body{
   }
 
   .screen1 .arrow{
+    position: absolute;
     top: 25em;
     left: 15em;
+  }
+
+  .screen2{
+    background: #9cb57380;
+    height: 40em;
+    border-radius: 10%;
   }
 
   .screen2 .title{
     justify-items: center;
     width: 100%;
-    height: 100%;
+    height: max-content;
     text-align: center;
     font-size: 60px;
+    background-color: #f8f4f365;
+  }
+
+  .screen2 .control{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .screen2 .control .list{
+    padding: 0em 2em;
+    font-family: font1;
+    font-size: 30px;
+    color: snow;
+    font-weight: 300;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screen2 .control .list .icon{
+    max-width: 150px;
+  }
+
+  .screen2 .control .list .icon1{
+    margin-top: 10px;
+    max-width: 100px;
+  }
+
+  .screen2 .control .list .btn{
+    height: 60px;
+    width: 100px;
+    border-radius: 10%;
+    margin: 10px;
+    background-color: var(--olive);
+    color: snow;
+    font-family: font2;
+    font-size: 18px;
+    align-self: center;
+    border-color: #9CB573;
+
+  }
+
+  .screen2 .control .list .btn .icon{
+    max-height: 32px;
+    max-width: 32px;
+  }
+
+  .thank{
+    display: flex;
+    justify-content: center;
   }
 
   .mimimomo{
-    height: 790px;
+    height: 20em;
+  }
+
+  footer{
+    width: 100%;
+    padding: 2em;
   }
