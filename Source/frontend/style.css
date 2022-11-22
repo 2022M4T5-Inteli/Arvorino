@@ -1,0 +1,93 @@
+body { 
+    background-color: #e1e8d5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("./fontes/PathwayGothicOne-Regular.ttf");
+}
+
+h1 {
+    font-family: myFirstFont;
+    color: #0F6952;
+}
+
+h2 {
+    font-family: myFirstFont;
+    color: #0F6952;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFirstFont;
+}
+
+.skill{
+    height: 160px;
+    position: relative;
+    margin: auto;
+}
+.outer{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                6px 6px 10px -1px rgba(255, 255, 255, 0.7)
+}
+.inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+#temperatura{
+    font-weight: 1000px;
+    color:#0F6952;
+    font-family: myFirstFont;
+
+}
+#umidade{
+    font-weight: 1000px;
+    color:#0F6952;
+    font-family: myFirstFont;
+
+}
+#status{
+    font-weight: 1000px;
+    color:#0F6952;
+    font-family: myFirstFont;
+
+}
+circle{
+    fill: none;
+    stroke: #0F6952;
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2.5s linear forwards;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@keyframes anim {
+    100%{
+        stroke-dashoffset: 20;
+
+    }
+}
