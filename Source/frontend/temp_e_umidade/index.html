@@ -20,14 +20,17 @@
     
       <!--jquery-->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+
+      
         <link href="style.css" rel="stylesheet">
         <link href="../pagina 2/style.css" rel="stylesheet">
         <script src="script.js"></script>
+        
 </head>
 <body>
   <div class="container">
-    <h1 class="text-center" style = "margin-bottom: 50px;">INFORMAÇÕES - ESTUFA 1</h1>
+    <h1 class="text-center" style = "margin-bottom: 50px;">INFORMAÇÕES</h1>
+    <div id="horario" class="text-center" style = "margin-bottom: 50px;"></div>
     <div class="row">
       <div class = "col-md-4 d-flex flex-column justify-content-center">
           <h2 style = "margin-bottom: 20px; text-align: center;">Temperatura</h2>
@@ -35,7 +38,6 @@
               <div class="outer">
                   <div class="inner">
                       <div id="temperatura">
-                        27º
                       </div>
                     </div>
                 </div>
@@ -56,7 +58,7 @@
                   <div class="outer">
                       <div class="inner">
                           <div id="umidade">
-                              60%
+                              
                             </div>
                         </div>
                     </div>
@@ -66,12 +68,12 @@
                 </div>
             </div>
             <div class = "col-md-4 d-flex flex-column justify-content-center">
-              <h2 style = "margin-bottom: 20px; text-align: center;">Status</h2>
+              <h2 style = "margin-bottom: 20px; text-align: center;">Estufa</h2>
               <div class="skill">
                   <div class="outer">
                       <div class="inner">
-                          <div id="status">
-                            Regular
+                          <div id="estufa">
+                            
                           </div>
                         </div>
                     </div>
@@ -85,4 +87,4 @@
     </div>   
   </div>
 </body>
-
+<script src="tempumi.js"></script>
