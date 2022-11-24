@@ -43,7 +43,7 @@ app.post('/registroinsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	// insere valores de nome e tipo segundo a request enviada pelo cliente
-	sql = "INSERT INTO Registros (temperatura, umidade, hora, minuto, dia, mes, ano, id_estufa) VALUES ('" + req.body.temperatura + "', '" + req.body.umidade + "', '" + req.body.hora + "', '" + req.body.minuto + "', '" + req.body.dia + "', '" + req.body.mes + "', '" + req.body.ano + "', '" + req.body.id_estufa + "')";
+	sql = "INSERT INTO Registros (temperatura, umidade, hora, minuto, dia, mes, id_estufa) VALUES ('" + req.body.temperatura + "', '" + req.body.umidade + "', '" + req.body.hora + "', '" + req.body.minuto + "', '" + req.body.dia + "', '" + req.body.mes + "', '" + req.body.id_estufa + "')";
 	var db = new sqlite3.Database(DBPATH);
 	db.run(sql, [],  err => {
 		if (err) {
@@ -136,7 +136,7 @@ app.post('/statusjanelainsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	// insere valores de nome e tipo segundo a request enviada pelo cliente
-	sql = "INSERT INTO Status_Janela (porcentagem, status, id_janela, hora, minuto, dia, mes, ano) VALUES ('" + req.body.porcentagem + "', '" + req.body.status + "', '" + req.body.hora + "', '" + req.body.minuto + "', '" + req.body.dia + "', '" + req.body.mes + "', '" + req.body.ano + "', '" + req.body.id_janela + "')";
+	sql = "INSERT INTO Status_Janela (porcentagem, status, id_janela, hora, minuto, dia, mes, ano) VALUES ('" + req.body.porcentagem + "', '" + req.body.status + "', '" + req.body.id_janela + "', '" + req.body.hora + "', '" + req.body.minuto + "', '" + req.body.dia + "', '" + req.body.mes + "', '" + req.body.ano + "')";
 	var db = new sqlite3.Database(DBPATH);
 	db.run(sql, [],  err => {
 		if (err) {
