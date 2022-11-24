@@ -12,7 +12,6 @@ const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.use(express.static("../frontend/"));
-
 app.use(express.json());
 
 // caminho do banco de dados
