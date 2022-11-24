@@ -4,7 +4,7 @@ console.log(get_registros());
 function get_registros() {
     let array = [];
     $.ajax({
-        url: "http://10.128.0.24:1234/registros",
+        url: "http://127.0.0.1:1234/registros",
         type: 'GET',
         async: false,
         success: data => {
@@ -16,7 +16,8 @@ function get_registros() {
     return array;
 }
 var dados = get_registros();
-document.getElementById("temperatura").innerHTML = dados[dados.length - 1].temperatura;
-document.getElementById("umidade").innerHTML = dados[dados.length - 1].umidade;
-document.getElementById("estufa").innerHTML = dados[dados.length - 1].estufa;
-document.getElementById("horario").innerHTML = dados[dados.length - 1].horario;
+
+document.getElementById("temperatura").innerHTML = "teste";
+// document.getElementById("umidade").innerHTML = dados[dados.length - 1].umidade;
+// document.getElementById("estufa").innerHTML = dados[dados.length - 1].estufa;
+// document.getElementById("horario").innerHTML = dados[dados.length - 1].horario;
