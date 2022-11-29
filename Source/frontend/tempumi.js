@@ -17,7 +17,9 @@ function get_registros() {
 }
 var dados = get_registros();
 
-document.getElementById("temperatura").innerHTML = "teste";
-// document.getElementById("umidade").innerHTML = dados[dados.length - 1].umidade;
-// document.getElementById("estufa").innerHTML = dados[dados.length - 1].estufa;
-// document.getElementById("horario").innerHTML = dados[dados.length - 1].horario;
+//alert(dados[dados.length - 1].umidade);
+
+document.getElementById("temperatura").innerHTML = dados[dados.length - 1].temperatura;
+document.getElementById("umidade").innerHTML = dados[dados.length - 1].umidade;
+document.getElementById("estufa").innerHTML = dados[dados.length - 1].id_estufa;
+document.getElementById("horario").innerHTML = dados[dados.length - 1].hora;
