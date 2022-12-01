@@ -1,0 +1,263 @@
+/*=================DEFINITIONS====================*/
+
+
+/* Fonts */
+@font-face {
+    font-family: font1;
+    src: url(resources/font/PathwayGothicOne-Regular.ttf);
+  }
+
+@font-face {
+  font-family: font2;
+  src: url(resources/font/Raleway-Regular.ttf);
+}
+
+/* Colors */
+*{
+  --lightBlue: #64A6BD;
+  --darkBlue: #26547C;
+  --snow: #f8f4f3;
+  --olive: #9CB573;
+  --oliveDark: #0f6952;
+}
+
+a{
+  text-decoration: none;
+  color: snow;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h1{
+  margin: 0px;
+}
+
+h2{
+  margin: 0px;
+}
+
+h3{
+  margin: 0px;
+}
+
+body{
+  margin: 0%;
+}
+
+main{
+  margin: 0px;
+}
+section{
+  margin: 0px;
+}
+
+footer{
+  margin: 0%;
+  padding: 0px 1em;
+  background-color: rgba(15, 105, 82, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  font-family: font1;
+  color: var(--olive);
+  font-weight: 400;
+}
+
+/* ===============NAVBAR===================== */
+  .navbar {
+    position: sticky;
+    width: 100%;
+    height: 72px;
+    left: 0px;
+    top: 0px;
+    background: rgba(15, 105, 82, 0.3);
+    mix-blend-mode: darken;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    align-items: center;
+  }
+
+  .navbar .Info{
+    font-family: font1;
+    font-size: 20px;
+    color: snow;
+    position: absolute;
+    left: 70%;
+
+  }
+
+  .navbar .Info1{
+    font-family: font1;
+    font-size: 20px;
+    color: snow;
+    position: absolute;
+    left: 80%;
+  }
+
+  .navbar .Info:hover{
+    background: #f8f4f365;
+  } 
+
+  .navbar .menu{
+    max-width:30px;
+    max-height:30px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+  }
+
+/* ============ SCREEN 1 ===================== */
+
+  .screen1{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+  
+  .screen1 .text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .screen1 .text .title{
+    left: 8%;
+    font-size: 60px;
+    margin: 0px;
+  }
+
+  .screen1 .text .subtitle{
+    font-family: font2;
+    color: var(--oliveDark);
+  }
+
+  .screen1 .imgHome{
+    float: right;
+  }
+
+  .screen1 .arrow{
+    position: absolute;
+    top: 25em;
+    left: 15em;
+  }
+
+  .screen1 .arrow{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    left: 20%;
+  }
+
+  /* ===================== SCREEN 2 ====================== */
+  .screen2{
+    background: #9cb57380;
+    height: 35em;
+    border-radius: 10%;
+    margin-top: 3em;
+  }
+
+  .screen2 .title{
+    justify-items: center;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    font-size: 60px;
+    background-color: #f8f4f365;
+  }
+
+  .screen2 .allSensors{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .screen2 .allSensors .s{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    align-items: center;
+  }
+
+  .screen2 .allSensors .s .stove{
+    color: var(--snow);
+    font-family: font2;
+    margin: 10px;
+  }
+
+  .screen2 .allSensors .s .btn{
+    background-color: #0f69535d;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-style: none;
+    padding: 5px 0px;
+    width: 90px;
+    margin: 10px;
+    font-family: font2;
+    color: var(--snow);
+  }
+
+  .screen2 .allSensors .s .status{
+    background-color: #0f69535d;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-style: none;
+    padding: 5px 0px;
+    width: 90px;
+    margin: 10px;
+    font-family: font2;
+    color: var(--snow);
+  }
+
+
+
+  .screen2 .allSensors .addSensor{
+    margin-top: 40px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    font-family: font2;
+    color: var(--snow);
+  } 
+  .screen2 .allSensors .addSensor .addSensorBtn{
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+  }
+
+  .screen2 .allSensors .addSensor .addSensorBtn:hover{
+    cursor: pointer;
+  }
+
+  /* ================= SCRENN 3 ======================== */
+
+
+  .thankyou{
+    margin: 5em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer1{
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    padding: 2vh 7vw;
+  }
+
+  .footer2{
+    max-width: 150px;
+  }
+
+  .footer3{
+    max-width: 85px;
+  }
