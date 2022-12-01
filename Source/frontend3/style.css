@@ -205,6 +205,20 @@ footer{
     color: var(--snow);
   }
 
+  .screen2 .allSensors .s .status{
+    background-color: #0f69535d;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-style: none;
+    padding: 5px 0px;
+    width: 90px;
+    margin: 10px;
+    font-family: font2;
+    color: var(--snow);
+  }
+
+
+
   .screen2 .allSensors .addSensor{
     margin-top: 40px;
     margin-left: 30px;
