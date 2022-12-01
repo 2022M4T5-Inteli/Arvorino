@@ -120,6 +120,26 @@ app.get('/estufas', (req, res) => {
 	db.close();
 });
 
+//Get estufa específica
+app.post("/resultadoEixo/userupdate", urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
+  
+	sql =
+	  "'SELECT * FROM Estufa WHERE id_estufa = ? ORDER BY id_estufa COLLATE NOCASE";
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	var params = [];
+	params.push(req.body.id_estufa);
+  
+	db.run(sql, params, (err) => {
+	  if (err) {
+		throw err;
+	  }
+	});
+	db.close(); // Fecha o banco
+	res.end();
+  });
+
 // NETWORKINSERT - inserir novos Registros na tabela NETWORK
 app.post('/estufainsert', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
