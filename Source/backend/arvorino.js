@@ -41,6 +41,25 @@ async function test() {
 	}
 }
 
+/* FETCH ESP32 DATA API THINGSPEAK */
+setInterval(test, 60000)
+test();
+async function test() {
+	let response = await fetch("https://api.thingspeak.com/channels/1963863/feeds.json?minutes=1&results=1&timezone=America/Sao_Paulo") 
+	let data = await response.json()
+	for (let i = 0; i < data.feeds.length; i++) {
+		const element = data.feeds[i];
+		let sql = "INSERT INTO Registros (temperatura, umidade, hora, minuto, dia, mes, id_estufa) VALUES ('" + element.field1 + "', '" + element.field2 + "', '" + element.field3 + "', '" + element.field4 + "', '" + element.field5 + "', '" + element.field6 + "', '" + element.field7 + "')";
+		var db = new sqlite3.Database(DBPATH);
+		db.run(sql, [], err => {
+			if (err) {
+				throw err;
+			}
+		});
+		db.close();
+	}
+}
+
 // NETWORKS - checar Registros cadastros na tabela NETWORK
 app.get('/registros', (req, res) => {
 	res.statusCode = 200;
