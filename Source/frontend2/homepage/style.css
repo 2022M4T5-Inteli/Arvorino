@@ -1,0 +1,202 @@
+/*=================DEFINITIONS====================*/
+
+
+/* Fonts */
+@font-face {
+    font-family: font1;
+    src: url(resources/font/PathwayGothicOne-Regular.ttf);
+  }
+
+@font-face {
+  font-family: font2;
+  src: url(resources/font/Raleway-Regular.ttf);
+}
+
+/* Colors */
+*{
+  --lightBlue: #64A6BD;
+  --darkBlue: #26547C;
+  --snow: #f8f4f3;
+  --olive: #9CB573;
+  --oliveDark: #0f6952;
+}
+
+a{
+  text-decoration: none;
+  color: snow;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h3{
+  margin: 0px;
+}
+
+body{
+  margin: 0%;
+}
+
+.title{
+  font-family: font1;
+  color: var(--olive);
+  font-weight: 400;
+}
+
+/* ===============NAVBAR===================== */
+  .navbar {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 72px;
+    left: 0px;
+    top: 0px;
+    background: rgba(15, 105, 82, 0.3);
+    mix-blend-mode: darken;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .navbar .Home{
+    font-family: font1;
+    font-size: 10vw;
+    color: snow;
+    position: absolute;
+    width: max-content;
+    left: 40vw;
+  }
+
+  .navbar .Home:hover{
+    background: #f8f4f365;
+  }
+
+  .navbar .Info{
+    font-family: font1;
+    font-size: 10vw;
+    color: snow;
+    position: absolute;
+    width: max-content;
+    left: 40vw;
+  }
+
+  .navbar .Info:hover{
+    background: #f8f4f365;
+  } 
+
+  .navbar .menu{
+    max-width:30px;
+    max-height:30px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+  }
+
+/* ============ SCREEN 1 ===================== */
+
+  .screen1{
+    width: 100%;
+    height: 100%;
+  }
+
+  .screen1 .title{
+    left: 8%;
+    font-size: calc(2em + 5vw);
+    margin: 0%;
+    margin-left: 1em;
+    margin-top: 5px;
+  }
+
+  .screen1 .subtitle{
+    font-family: font2;
+    margin-top: 0%;
+    margin-left: 4.3em;
+    color: var(--oliveDark);
+  }
+
+  .screen1 .imgHome{
+    float: right;
+  }
+
+  .screen1 .arrow{
+    position: absolute;
+    top: 25em;
+    left: 15em;
+  }
+
+  /* ===================== SCREEN 2 ====================== */
+  .screen2{
+    background: #9cb57380;
+    height: 40em;
+    border-radius: 10%;
+  }
+
+  .screen2 .title{
+    justify-items: center;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    font-size: 60px;
+    background-color: #f8f4f365;
+  }
+
+  .screen2 .control{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .screen2 .control .list{
+    padding: 0em 2em;
+    font-family: font1;
+    font-size: 30px;
+    color: snow;
+    font-weight: 300;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screen2 .control .list .icon{
+    max-width: 150px;
+  }
+
+  .screen2 .control .list .icon1{
+    margin-top: 10px;
+    max-width: 100px;
+  }
+
+  .screen2 .control .list .btn{
+    height: 60px;
+    width: 100px;
+    border-radius: 10%;
+    margin: 10px;
+    background-color: var(--olive);
+    color: snow;
+    font-family: font2;
+    font-size: 18px;
+    align-self: center;
+    border-color: #9CB573;
+
+  }
+
+  .screen2 .control .list .btn .icon{
+    max-height: 32px;
+    max-width: 32px;
+  }
+
+  .thank{
+    display: flex;
+    justify-content: center;
+  }
+
+  .mimimomo{
+    height: 20em;
+  }
+
+  footer{
+    width: 100%;
+    padding: 2em;
+  }

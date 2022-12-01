@@ -12,7 +12,7 @@ const port = 1234;
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-app.use(express.static("../frontend/"));
+app.use(express.static("../frontend3/"));
 app.use(express.json());
 
 // caminho do banco de dados
@@ -79,7 +79,7 @@ app.get('/janelas', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 
 	var db = new sqlite3.Database(DBPATH);
-	var sql = 'SELECT * FROM Janela ORDER BY id COLLATE NOCASE'; // ordena por id
+	var sql = 'SELECT * FROM Janela ORDER BY id_janela COLLATE NOCASE'; // ordena por id
 	db.all(sql, [], (err, rows) => {
 		if (err) {
 			throw err;
@@ -110,7 +110,7 @@ app.get('/estufas', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 
 	var db = new sqlite3.Database(DBPATH);
-	var sql = 'SELECT * FROM Estufa ORDER BY id COLLATE NOCASE'; // ordena por id
+	var sql = 'SELECT * FROM Estufa ORDER BY id_estufa COLLATE NOCASE'; // ordena por id
 	db.all(sql, [], (err, rows) => {
 		if (err) {
 			throw err;
@@ -141,7 +141,7 @@ app.get('/statusjanelas', (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 
 	var db = new sqlite3.Database(DBPATH);
-	var sql = 'SELECT * FROM Status_Janela ORDER BY id COLLATE NOCASE'; // ordena por id
+	var sql = 'SELECT * FROM Status_Janela ORDER BY id_status COLLATE NOCASE'; // ordena por id
 	db.all(sql, [], (err, rows) => {
 		if (err) {
 			throw err;
