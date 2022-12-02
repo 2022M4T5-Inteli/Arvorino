@@ -206,7 +206,7 @@ app.post('/statusjanelainsert', urlencodedParser, (req, res) => {
 	res.end();
 });
 
-/* Inicia o servidor */
-app.listen(port, hostname, () => {
-	console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(port, function () {
+    console.log(`Listening on port ${port}`);
 });
+module.exports = app;

@@ -31,12 +31,6 @@ function showSensors(){
         title.setAttribute("class", "stove");
         title.textContent = sensores[i].nome_estufa;
         var status = document.createElement("button");
-        // if(sensores[i].nome_estufa == registros[]){
-
-        // }
-        status.setAttribute("class", "btn");
-        status.textContent = registros[i].temperatura;
-
 
         document.getElementById("sensor"+i).appendChild(sensor);
         document.getElementById("sensor"+i).appendChild(title);
