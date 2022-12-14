@@ -69,17 +69,6 @@ void loop() {
   ThingSpeak.setField(1, number1);
   ThingSpeak.setField(2, number2);
 
-  // figure out the status message
-  //if(number1 > number2){
-  //  myStatus = String("field1 is greater than field2"); 
-  //}
-  //else if(number1 < number2){
-  //  myStatus = String("field1 is less than field2");
-  //}
-  //else{
-  //  myStatus = String("field1 equals field2");
-  //}
-  
   // set the status
   ThingSpeak.setStatus(myStatus);
   
@@ -93,14 +82,6 @@ void loop() {
   }
   
   apontaErro(temp.temperature, humidity.relative_humidity);
-  // change the values
-  //number1++;
-  //if(number1 > 99){
-  //  number1 = 0;
-  //}
-  //number2 = random(0,100);
-  //number3 = random(0,100);
-  //number4 = random(0,100);
   
   delay(5000); // Wait 20 seconds to update the channel again
 }

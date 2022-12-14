@@ -6,8 +6,8 @@
 #include "display.h"    // Importa a biblioteca local que contém códigos sobre o funcionamento do display
 #include "led.h"        // Importa biblioteca local que contém códigos sobre o funcionamento do led rgb
 #include "thing_speak.h" // Importa biblioteca local que contém códigos sobre o funcionamento do ThingSpeak
-#include "aht10.h"
-#include "config_wifi.h"
+#include "aht10.h" //Importa biblioteca local que contém códigos sobre o funcionanamento do aht10.h
+#include "config_wifi.h" //Importa biblioteca local com credenciais do wifi e thingspeak
 
 // Inicia os valores para as váriaveis utilizadas para os dados de temperatura e umidade
 int numero1 = 10; //temperatura sensor AHT10
@@ -15,8 +15,9 @@ int numero2 = random(0,100); //umidade sensor AHT10
 String myStatus = ""; 
 
 void setup() {
-  iniciaWifi(); //Inicia o funcionamento do wifi
   Serial.begin(115200); //Inicia o serial na velocidade 115200
+  Wire.begin(45, 47); //Inicia wire do sensor do aht10 e display
+  iniciaWifi(); //Inicia o funcionamento do wifi
   iniciaDisplay(); //inicia o funcionamento do display LCD
   iniciaSensor(); //inicia o funcionamento do sensor AHT10
 }
