@@ -2,6 +2,8 @@
 #include <HTTPClient.h> // Requisições Http
 #include "config_wifi.h" //Importa biblioteca local com o nome do wifi e informações do número do canal e API KEY do ThingSpeak
 #include "ThingSpeak.h" // Importa a biblioteca do thingspeak com funcionalidades 
+#include "led.h" // Importa o arquivo local referente aos LEDs
+#include "display.h" // Importa o arquivo local referente ao display
 
 char ssid[] = SECRET_SSID; // Nome da rede wi-fi
 int keyIndex = 0;            // your network key Index number (needed only for WEP)
@@ -16,6 +18,8 @@ void iniciaWifi () {
   if(WiFi.status() != WL_CONNECTED){
     Serial.print("Attempting to connect to SSID: ");
     Serial.println(SECRET_SSID);
+    acendeVermelho();
+    printaErro();
 
     //enquanto o wifi não for conectado ele fica na espera e printando "..." no serial, assim que ele conectar ele confirma a conecção e diz o IP
     while(WiFi.status() != WL_CONNECTED){
@@ -24,6 +28,9 @@ void iniciaWifi () {
       delay(5000);     
     } 
     Serial.println("\nConnected.");
+  }
+  else{
+    acendeVerde();
   }
   
   while (!Serial) {
