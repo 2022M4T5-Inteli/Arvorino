@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showRecord()">
+    <nav class = "navbar">
+        <img src="resources/imagens/hambergermenu.png" alt="menu" class="menu">
+        <div class="text">
+        <h1 class="Info"><a href="#control">E S T U F A S</a></h>
+        <h1 class="Home"><a href="#screen1" class="Info1">H O M E</a></h1>
+        </div>
+    </nav>
+    <main>
+        <section class="screen1Info">
+            <h1 class="title">ESTUFA 1</h1>
+            <div class="sensorStt">
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle"
+                      stroke-dasharray="27, 100"
+                      d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <text x="18" y="20.35" class="percentage" id="temp">27°C</text>
+                  </svg>
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle"
+                      stroke-dasharray="60, 100"
+                      d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <text x="18" y="20.35" class="percentage" id="umid">60%</text>
+                  </svg>
+                <svg viewBox="0 0 36 36" class="circular-chart">
+                    <path class="circle"
+                      stroke-dasharray="100, 100"
+                      d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                    />
+                    <text x="18" y="20.35" class="stt">Regular</text>
+                  </svg>
+                <div class="infoCharts">
+                    <p class="inf">Temperatura</p>
+                    <p class="inf">Umidade</p>
+                    <p class="inf">Status</p>
+                </div>
+                </div>
+            <div class="editInfo">
+                <button type="button" class="collapsible" onclick="collapse()" id="collapse">EDITAR INFORMAÇÕES</button>
+                <div class="content">
+                    <input type="text" class="NameStove">
+                    <input type="text" class="IDSensor">
+                    <input type="text" placeholder="Instalação">
+                    <input type="text" placeholder="Última manutenção">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

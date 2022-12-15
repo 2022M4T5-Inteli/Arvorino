@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body onload="showSensors()">
+
+    <nav class = "navbar">
+        <img src="resources/imagens/hambergermenu.png" alt="menu" class="menu">
+        <div class="text">
+        <h1 class="Info"><a href="#control">E S T U F A S</a></h>
+        <h1 class="Home"><a href="#screen1" class="Info1">H O M E</a></h1>
+        </div>
+    </nav>
+    <main>
+        <section class="screen1">
+            <div class="text">
+                <h1 class="title">A R V O R I N O</h1>
+                <h3 class="subtitle">em busca da janela automática</h3>
+            </div>
+            <picture class="imgHome">
+                <source media="(max-width: 500px)" srcset="resources\imagens\two-researches-man-and-woman-examine-greenery-with-a-tablet-in-an-all-white-greenhouse-small.png" type="image/png">
+                <img src="resources\imagens\two-researches-man-and-woman-examine-greenery-with-a-tablet-in-an-all-white-greenhouse 1.png" alt="cientistas_na_estufa">
+            </picture>
+            <div class="arrow">
+                <img src="resources/imagens/seta.png" alt="seta">
+            </div>
+        </section>
+        <section class="screen2">
+            <h1 class="title">CONTROLE DE ESTUFAS</h1>
+            <div class="allSensors" id="allSensors">
+                <div class="s sensor">
+                    <img src="resources/imagens/monitoramento 4.png" alt="sensor">
+                    <h1 class="stove">ESTUFA 1</h1>
+                    <button class="btn">Status</button>
+                    <button class="btn">Informação</button>
+                </div>
+
+                <div class="addSensor">
+                    <button class="addSensorBtn" onclick="addSensor()">
+                    <img src="resources/imagens/addcircle.png" alt="add sensores" class="addSensorImg">
+                    </button>
+                    <h1>add sensor</h1>
+                </div>
+            </div>
+        </section>
+        <section class="thankyou">
+            <img src="resources/imagens/thank.png" alt="thank you">
+        </section>
+    </main>
+    <script src="script.js" ></script>
+</body>
+<footer>
+    <img src="resources/imagens/gerdau.png" alt="logo Gerdau" class="footer1">
+    <img src="resources/imagens/the_windows 1.png" alt="logo The Windows" class="footer1 footer2">
+    <img src="resources/imagens/inteli.png" alt="logo inteli" class="footer1 footer3">
+</footer>
+</html>

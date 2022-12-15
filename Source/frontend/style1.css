@@ -1,0 +1,171 @@
+@font-face {
+    font-family: font1;
+    src: url(resources/font/PathwayGothicOne-Regular.ttf);
+}
+
+body{
+    margin: 0px;
+}
+
+#circ{
+    background-color: #0f6f5550;
+    margin-top: 0.8rem;
+    height: 45px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#upSquare{
+    height: 400px;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-family: font1;
+}
+
+#med{
+    height: 275px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#jan{
+    height: 475px;
+    width: 280px;
+    margin-bottom: 2rem;
+    margin:1rem;
+    font-family: font1;
+}
+
+#up{
+    position: relative;
+    color: #0f6f55;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#ajj{
+    margin-top: 1rem;
+}
+
+#crtl{
+    margin-bottom: 1.5rem;
+    font-family: font1;
+    color:#0f6f55;
+}
+
+.zeraMargem{
+    width: 100%;
+}
+
+#redn{
+    display: flex;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    align-items: center;
+    background: conic-gradient(#0f6f55 3.6deg, #ededed 0deg);
+}
+
+#redn::before{
+    content:"";
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#lhead{
+    margin-top: 1rem;
+}
+
+#grs{
+    display: flex;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    align-items: center;    
+}
+
+#lrec{
+    width: 250px;
+    height: 35px;
+    background-color: #0f6f5530;
+    color: white;
+    border-style: none;
+}
+
+#lrec:hover{
+    background-color: #0f6f55;
+}
+
+#inpid{
+    height: 35px;
+    width: 700px;
+    background-color: #d9d9d975;
+    border-radius: 15px;
+    border-style: none;
+}
+
+#dpd{
+    height: 35px;
+    width: 300px;
+    background-color: #d9d9d975;
+    border-radius: 15px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-style: none;
+}
+
+#anot{
+    width: 700px;
+    height: 110px;
+    border-radius: 15px;
+    background-color: #d9d9d975;    
+    border-style: none;
+
+}
+
+#savebt{
+    height: 35px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: #0f6f5530;
+    color: #0f6f55;
+    border-style: none;
+}
+
+#savebt:hover{
+    background-color: #0f6f55a4;
+    color: white;
+}
+
+#navbt{
+    background-color: transparent;
+    border-style: none;
+    color:white;
+    font-size: 30px;
+    font-family: font1;
+}
+
+#navbt:hover{
+    color:black
+}
+
+.lg{
+    margin-left: 1100px;
+}
+
+#dt{
+    height: 35px;
+    width: 150px;
+    background-color: #d9d9d975;
+    border-radius: 15px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-style: none;
+}
