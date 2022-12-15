@@ -12,7 +12,7 @@
 ## Integrantes:
 - <a href="https://www.linkedin.com/in/antonio-angelo-teixeira-a70b781a7/"> Antonio Angelo Teixeira</a>
 - <a href="https://www.linkedin.com/in/arthur-fraige/">Arthur Fraige</a>
-- <a href="https://www.linkedin.com/in/patriciahonorato/">Patrícia Honorato Moreira</a>
+- <a href="https://www.linkedin.com/in/patriciahonorato/">Patricia Honorato Moreira</a>
 - <a href="https://www.linkedin.com/in/priscila-falc%C3%A3o-3435a1244/">Priscila Falcão</a>
 - <a href="https://www.linkedin.com/in/raphael-lisboa/">Raphael Lisboa Antunes</a>
 - <a href="https://www.linkedin.com/in/sophia-de-oliveira-tosar-aba7ab23b/">Sophia de Oliveira Tosar</a> 
