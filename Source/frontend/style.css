@@ -1,0 +1,437 @@
+/*=================DEFINITIONS====================*/
+
+
+/* Fonts */
+@font-face {
+    font-family: font1;
+    src: url(resources/font/PathwayGothicOne-Regular.ttf);
+  }
+
+@font-face {
+  font-family: font2;
+  src: url(resources/font/Raleway-Regular.ttf);
+}
+
+/* Colors */
+*{
+  --lightBlue: #64A6BD;
+  --darkBlue: #26547C;
+  --snow: #f8f4f3;
+  --olive: #9CB573;
+  --oliveDark: #0f6952;
+}
+
+a{
+  text-decoration: none;
+  color: snow;
+}
+
+ul{
+  list-style-type: none;
+}
+
+h1{
+  margin: 0px;
+}
+
+h2{
+  margin: 0px;
+}
+
+h3{
+  margin: 0px;
+}
+
+body{
+  margin: 0%;
+}
+
+main{
+  margin: 0px;
+}
+section{
+  margin: 0px;
+}
+
+footer{
+  margin: 0%;
+  padding: 0px 1em;
+  background-color: rgba(15, 105, 82, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  font-family: font1;
+  color: var(--olive);
+  font-weight: 400;
+}
+
+/* ===============NAVBAR===================== */
+  .navbar {
+    position: sticky;
+    width: 100%;
+    height: 72px;
+    left: 0px;
+    top: 0px;
+    background: rgba(15, 105, 82, 0.3);
+    mix-blend-mode: darken;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar .Info{
+    font-family: font1;
+    font-size: 20px;
+    color: snow;
+    position: absolute;
+    left: 75%;
+
+  }
+
+  .navbar .Info1{
+    font-family: font1;
+    font-size: 20px;
+    color: snow;
+    position: absolute;
+    left: 85%;
+  }
+
+  .navbar .Info:hover{
+    background: #f8f4f365;
+  } 
+
+  .navbar .menu{
+    max-width:60px;
+    max-height:60px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    left: 1.5%;
+  }
+
+/* ============ SCREEN 1 ===================== */
+
+  .screen1{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+  
+  .screen1 .text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .screen1 .text .title{
+    left: 8%;
+    font-size: 60px;
+    margin: 0px;
+  }
+
+  .screen1 .text .subtitle{
+    font-family: font2;
+    color: var(--oliveDark);
+  }
+
+  .screen1 .imgHome{
+    float: right;
+  }
+
+  .screen1 .arrow{
+    position: absolute;
+    top: 25em;
+    left: 15em;
+  }
+
+  .screen1 .arrow{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    left: 20%;
+  }
+
+  /* ===================== SCREEN 2 ====================== */
+  .screen2{
+    background: #9cb57380;
+    min-height: 35em;
+    height: fit-content;
+    padding-bottom: 4em;
+    border-radius: 10%;
+    margin-top: 3em;
+  }
+
+  .screen2 .title{
+    justify-items: center;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    font-size: 60px;
+    background-color: #f8f4f365;
+  }
+
+  .screen2 .allSensors{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+  }
+  .screen2 .allSensors .sensor{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .screen2 .allSensors .s{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    align-items: center;
+  }
+
+  .screen2 .allSensors .s .stove{
+    color: var(--snow);
+    font-family: font2;
+    margin: 10px;
+  }
+
+  .screen2 .allSensors .s .btn{
+    background-color: #0f69535d;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-style: none;
+    padding: 5px 0px;
+    width: 90px;
+    margin: 10px;
+    font-family: font2;
+    color: var(--snow);
+  }
+
+  .screen2 .allSensors .s .status{
+    background-color: #0f69535d;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-style: none;
+    padding: 5px 0px;
+    width: 90px;
+    margin: 10px;
+    font-family: font2;
+    color: var(--snow);
+  }
+
+  .screen2 .allSensors .s .statusH{
+    background-color: rgba(167, 10, 10, 0.25);
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-style: none;
+    padding: 5px 0px;
+    width: 90px;
+    margin: 10px;
+    font-family: font2;
+    color: var(--snow);
+  }
+
+  .screen2 .allSensors .addSensor{
+    margin-top: 40px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    font-family: font2;
+    color: var(--snow);
+  } 
+  .screen2 .allSensors .addSensor .addSensorBtn{
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+  }
+
+  .screen2 .allSensors .addSensor .addSensorBtn:hover{
+    cursor: pointer;
+  }
+
+  .screen2 .popupAddSensor{
+    position: sticky;
+    background-color: var(--snow);
+    border-radius: 20px;
+    padding: 3em 5em;
+    width: 20%;
+    height: 70%;
+    z-index: 1;
+    display: hide;
+  }
+  
+  .screen2 .popup{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+  }
+
+  .screen2 .popupAddSensor .close{
+    float: right;
+    margin: 0px 0px 0px 20px;
+    position: absolute;
+    left: 85%;
+    color: var(--snow);
+    background-color: #0f6952;
+    border: none;
+    border-radius: 40px;
+    padding: 0.5em;
+  }
+
+  .screen1 .popupAddSensor .input{
+    margin: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ================= SCRENN 3 ======================== */
+
+
+  .thankyou{
+    margin: 5em;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer1{
+    height: auto;
+    width: auto;
+    max-width: 100px;
+    padding: 2vh 7vw;
+  }
+
+  .footer2{
+    max-width: 150px;
+  }
+
+  .footer3{
+    max-width: 85px;
+  }
+
+  /* ================= INFO PAGE ===================== */
+  .screen1Info{
+    display: flex;
+  }
+
+.editInfo{
+  width: 40%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+}
+.collapsible {
+  background-color: #64a5bd5e;
+  color: var(--oliveDark);
+  cursor: pointer;
+  padding: 18px;
+  width: 95%;
+  border: none;
+  border-radius: 20px;
+  margin: 2em 20px 0px 0px;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  font-family: font1;
+  float: right;
+  z-index: 1;
+}
+
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+.activeSelect{
+  border-radius: 20px 20px 0px 0px;
+}
+
+.content {
+  padding: 0 0px;
+  display: none;
+  flex-direction: column;
+  width: 95%;
+  align-items: center;
+  border: none;
+  margin: 0px 20px 0px 1px;
+  float: right;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.sensorStt{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%;
+  position: relative;
+  flex-flow: row wrap;
+}
+
+.screen1Info .title{
+  font-size: 80px;
+  position: absolute;
+  margin: 0.2em 1em;
+}
+/* chart config */
+
+.circular-chart {
+  max-width: 80%;
+  margin: 8em 1em 2em 0.5em;
+  max-height: 180px;
+}
+
+.circle {
+  stroke: var(--oliveDark);
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.percentage {
+  fill: #666;
+  font-family: font2;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+
+.stt{
+  fill: #666;
+  font-family: font2;
+  font-size: 0.4em;
+  text-anchor: middle;
+}
+
+.infoCharts{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.inf{
+  font-family: font1;
+  color: #0f6952;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+</head>
+<body onload="showRecord()">
+    <div class="d-flex align-content-end" id="circ">
+        <img src="resources/imagens/arvorino.png" height="45px" width="90px">
+        <button id="navbt" class="lg">JANELAS</button>
+        <button id="navbt">ESTUFAS</button>
+        <button id="navbt">HOME</button>
+    </div>
+    <div class="container; zeraMargem">
+        <div class="row">
+            <div class="col-sm " id="upSquare">
+                <div>
+                    <h1 style="color: #0F6952;">SENSOR 1</h1>
+                </div>
+                <div class="row">
+                    <div class="col-sm" id="med">
+                        <div class="circular-progress;d-flex justify-content-center " id="redn" style="background-color: blue">
+                            <span class="progress-value" id="temp">27°</span>
+                        </div>
+                        <div id="ajj"><h3 style="color: #0F6952;">TEMPERATURA</h3></div>
+                    </div>
+                    <div class="col-sm" id="med">
+                        <div class="circular-progress;d-flex justify-content-center " id="redn" style="background-color: blue">
+                            <span class="progress-value" id="umid">92%</span>
+                        </div>
+                        <div id="ajj"><h3 style="color:#0F6952">UMIDADE</h3></div>
+                    </div>
+                    <div class="col-sm" id="med">
+                        <div class="circular-progress;d-flex justify-content-center " id="redn" style="background-color: blue">
+                            <span class="progress-value" id="stt">REGULAR</span>
+                        </div>
+                        <div id="ajj"><h3 style="color:#0F6952">STATUS</h3></div>
+                    </div>
+                </div>
+            </div>
+                <div class="col-sm" id="upSquare">
+                <h3 style="color: #0F6952">EDITAR:</h3>
+                <div class="d-flex justify-content-center">
+                    <input type="number" id="inpid">
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <select id="dpd">
+                        <option>Intervalo de tempo</option>
+                        <option>1 min</option>
+                        <option>3 min</option>
+                        <option>5 min</option>
+                        <option>10 min</option>
+                        <option>15 min</option>
+                        <option>20 min</option>
+                        <option>30 min</option>
+                    </select>
+                    <select id="dpd">
+                        <option>Tipo de sensor</option>
+                        <option>AHT10</option>
+                    </select>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <input type="date" id="dt">
+                    <input type="date" id="dt">
+                    <button id="savebt">SALVAR</button>
+                </div>
+                <br>
+                <h3 style="color:#0F6952">SALVAR HISTÓRICO DE SENSOR ARQUIVO:</h3>
+                <div class="d-flex justify-content-center">
+                    <h5 style="color:#0F6952">De:</h5>
+                    <input type="date" id="dt">
+                    <h5 style="color:#0F6952">Até:</h5>
+                    <input type="date" id="dt">
+                    <button id="savebt">SALVAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center" id="crtl">
+            <h1>CONTROLE DAS JANELAS</h1>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div style="background-color: #a0b57371" id="jan">
+                    <div class="d-flex justify-content-center" id="lhead">
+                        <h3 style="color: #0F6952">JANELA LATERAL A</h3> 
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <h4 style="color: #a0b573">ABERTA</h4>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center" style="background-color:white" id="grs">
+                            <h1 style="color:#a0b573">0°</h1>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <button id="lrec">
+                            ABRIR JANELAS LATERAIS 30° 
+                        </button>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <button id="lrec">
+                            ABRIR JANELAS LATERAIS 45°
+                        </button>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <button id="lrec">
+                            ABRIR JANELAS LATERAIS 90°
+                        </button>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-center">
+                        <button id="lrec">
+                            FECHAR JANELAS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="row">
+            <div style="background-color: #a0b57371" id="jan">
+                <div class="d-flex justify-content-center" id="lhead">
+                    <h3 style="color: #0F6952">JANELA ZENITAL A</h3> 
+                </div>
+                <div class="d-flex justify-content-center">
+                    <h4 style="color: #a0b573">FECHADA</h4>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center" style="background-color:white" id="grs">
+                        <h1 style="color:#a0b573">0°</h1>
+                    </div>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button id="lrec">
+                        ABRIR JANELAS LATERAIS 30°
+                    </button>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button id="lrec">
+                        ABRIR JANELAS LATERAIS 45°
+                    </button>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button id="lrec">
+                        ABRIR JANELAS LATERAIS 90°
+                    </button>
+                </div>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button id="lrec">
+                        FECHAR JANELAS
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+</div>
+<script src="script.js"></script>
+</body>
