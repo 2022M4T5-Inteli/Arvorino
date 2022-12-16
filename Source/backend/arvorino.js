@@ -12,11 +12,11 @@ const port = process.env.PORT || 3001;
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-app.use(express.static("../frontend3/"));
+app.use(express.static("frontend"));
 app.use(express.json());
 
 // caminho do banco de dados
-const DBPATH = 'arvorino2.db'
+const DBPATH = './backend/arvorino2.db'
 
 
 /* DEFINIÇÃO DOS ENDPOINTS */

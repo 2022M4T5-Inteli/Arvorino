@@ -23,14 +23,12 @@ function showSensors(){
     xhttp2.send();
     registros = JSON.parse(xhttp2.responseText);
     registros[registros.length - 1].id_estufa = 1;
-
+    $('#sensorRows').html("");
     for(var i=0; i < sensores.length; i++){
         var divSensor = document.createElement("div");
         divSensor.setAttribute("class", "s sensor" + i);
         divSensor.setAttribute("id", "sensor"+i);
-        document.getElementById("allSensors").appendChild(divSensor);
-
-
+        document.getElementById("sensorRows").appendChild(divSensor);
         var sensor = document.createElement("img");
         sensor.setAttribute("src", "resources/imagens/monitoramento 4.png");
         sensor.setAttribute("alt", "sensor");
@@ -74,12 +72,13 @@ function saveSensor(){
     type: 'POST',
     async: false,
     data: {
-      nome_estufa: $("#stoveName").html(),
-      coordenador: $("#manager").html(),
+      nome_estufa: $("#stoveName").val(),
+      coordenador: $("#manager").val(),
       }
   });
   var btnsave = document.getElementById("save");
   btnsave.setAttribute("display", "hide");
+  showSensors();
 }
 
 
