@@ -1,11 +1,13 @@
-const int ledVermelho = 40; //identifica a porta ligada na perna do led referente à cor vermelha
-const int ledVerde = 38; //identifica a porta ligada na perna do led referente à cor verde
-const int ledAzul = 37; //identifica a porta ligada na perna do led referente à cor azul
+#define ledVermelho 40 //identifica a porta ligada na perna do led referente à cor vermelha
+#define ledVerde 38 //identifica a porta ligada na perna do led referente à cor verde
+#define ledAzul 37 //identifica a porta ligada na perna do led referente à cor azul
 
-const int ledVermelho1 = 1; 
-const int ledVerde1 =  42;
-const int ledAzul1 =  41;
+#define ledRed 1
+#define ledGreen 42
+#define ledBlue 41
 
+
+//Código referente ao 1° LED
 void apontaErroTempUmid(float temp, float humidity) {
   //Se a temperatura estiver abaixo de 26,6°C ou acima de 36,0°C o led RGB acende na cor vermelha
   //Se a umidade relativa do ar estiver abaixo de 29,75% ou acima de 66,50% o led RGB acende na cor amarela
@@ -26,18 +28,21 @@ void apontaErroTempUmid(float temp, float humidity) {
   }
 }
 
+//Funçoes das linhas 34 e 42, são referentes ao 2° LED
+
+//Acende o led na cor vermelha, será chamada caso ocorra algum erro
 void acendeVermelho(){
-    analogWrite(ledVermelho1, 0);
-    analogWrite(ledVerde1, 255);
-    analogWrite(ledAzul, 255);
+    analogWrite(ledRed, 0);
+    analogWrite(ledGreen, 255);
+    analogWrite(ledBlue, 255);
   
 }
 
-
+//Acende o led na cor verde, será chamada sempre que der tudo certo
 void acendeVerde(){
-    analogWrite(ledVermelho1, 255);
-    analogWrite(ledVerde1, 0);
-    analogWrite(ledAzul, 255);
+    analogWrite(ledRed, 255);
+    analogWrite(ledGreen, 0);
+    analogWrite(ledBlue, 255);
   
 }
 

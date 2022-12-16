@@ -12,14 +12,20 @@
 // Inicia os valores para as váriaveis utilizadas para os dados de temperatura e umidade
 int numero1 = 10; //temperatura sensor AHT10
 int numero2 = random(0,100); //umidade sensor AHT10
-String myStatus = ""; 
+String myStatus = "";
+
 
 void setup() {
   Serial.begin(115200); //Inicia o serial na velocidade 115200
-  Wire.begin(45, 47); //Inicia wire do sensor do aht10 e display
-  iniciaWifi(); //Inicia o funcionamento do wifi
   iniciaDisplay(); //inicia o funcionamento do display LCD
   iniciaSensor(); //inicia o funcionamento do sensor AHT10
+
+  while(iniciaWifi() == false){
+    acendeVermelho();
+    printaErro();
+    iniciaWifi();
+  }
+  acendeVerde();
 }
 
 void loop() {
@@ -31,6 +37,4 @@ void loop() {
   printaTempUmid(temp, umid);
   enviaThingSpeak(numero1, numero2, myStatus);
   apontaErroTempUmid(temp, umid);
-
-
 }
