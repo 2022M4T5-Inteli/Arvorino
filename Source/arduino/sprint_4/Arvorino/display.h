@@ -10,8 +10,7 @@ void iniciaDisplay(){
   lcd.backlight(); //liga a luz do display
 }
 
-void printaDisplay(float temperatura, float umidade){
-  
+void printaTempUmid(float temperatura, float umidade){
   //Printa as informações da primeira linha (dados referentes à temperatura)
   lcd.setCursor(0, 0);
   lcd.print("Temp.:");
@@ -25,4 +24,12 @@ void printaDisplay(float temperatura, float umidade){
   lcd.print("Umidade:");
   lcd.print(umidade);
   lcd.print(" %");
+}
+
+void printaErro(){
+  lcd.setCursor(0,0);
+  lcd.print("Verifique sua internet");
+
+  lcd.setCursor(0,1);
+  lcd.print("e energia.")
 }

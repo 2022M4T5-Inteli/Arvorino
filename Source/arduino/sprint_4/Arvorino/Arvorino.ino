@@ -28,9 +28,9 @@ void loop() {
   
   numero1 = (int) (temp * 100); //converte o valor de temperatura para número inteiro, necessário para o thingspeak
   numero2 = (int) (umid * 100); //converte o valor de umidade para número inteiro, necessário para o thingspeak
-  printaDisplay(temp, umid);
+  printaTempUmid(temp, umid);
   enviaThingSpeak(numero1, numero2, myStatus);
-  apontaErro(temp, umid);
+  apontaErroTempUmid(temp, umid);
 
 
 }
