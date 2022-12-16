@@ -4,6 +4,7 @@
 #include "ThingSpeak.h" // Importa a biblioteca do thingspeak com funcionalidades 
 
 char ssid[] = SECRET_SSID; // Nome da rede wi-fi
+char pass[] = SECRET_PASS; //Senha da rede wi-fi
 int keyIndex = 0;            // your network key Index number (needed only for WEP)
 WiFiClient  client;
 
@@ -16,7 +17,7 @@ bool iniciaWifi () {
   if(WiFi.status() != WL_CONNECTED){
     Serial.print("Attempting to connect to SSID: ");
     Serial.println(SECRET_SSID);
-    WiFi.begin(ssid);  
+    WiFi.begin(ssid, pass);  
     Serial.print(".");
     delay(5000);
 
