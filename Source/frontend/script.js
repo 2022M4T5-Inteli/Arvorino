@@ -110,8 +110,12 @@ function showRecord(){
   xhttp2.open("GET", url2, false);
   xhttp2.send();
   registros = JSON.parse(xhttp2.responseText);
-  var temperatura = document.getElementById("temp"); 
-  temperatura.textContent = parseInt(registros[registros.length - 1].temperatura)/100 + "°C";
+  console.log(registros)
+  var temperatura = document.getElementById("tempLabel"); 
+  console.log(registros[registros.length - 1])
+  console.log(parseInt(registros[registros.length - 1].temperatura)/100 + "°C")
+  document.getElementById("tempLabel").innerText = parseInt(registros[registros.length - 1].temperatura)/100 + "°C"
+  //parseInt(registros[registros.length - 1].temperatura)/100 + "°C";
   var umidade = document.getElementById("umid");
   umidade.textContent = parseInt(registros[registros.length - 1].umidade)/100 + "%";
 }
