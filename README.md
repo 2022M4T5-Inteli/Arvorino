@@ -5,9 +5,6 @@
 </p>
 
 # Arvorino - The Windows
-<p align="center">
-<img src="https://github.com/PriscilaFalcao/The-Windows-Server/blob/main/frontend3/resources/imagens/arvorino.png?raw=true" alt="Inteli - Instituto de Tecnologia e Liderança" border="0">
-</p>
 
 ## Integrantes:
 - <a href="https://www.linkedin.com/in/antonio-angelo-teixeira-a70b781a7/"> Antonio Angelo Teixeira</a>
@@ -27,15 +24,20 @@ Pensando na melhor experiência do usuário, e tendo em vista o uso corrente de 
 O projeto está baseado em tecnologias voltadas para o hardware, como o uso das linguagens C/C++, para o back-end, contando com JavaScript como linguagem principal e o front-end levando CSS e HTML, além de outras ferrametas (servidores onlines, como o Render e ThingSpeak) e frameworks. Ademais, atribui banco de dados para a reserva das informações geradas.
 <br><br>
 
-## 🛠 Estrutura de pastas
+
+## 📁 Estrutura de pastas
+
 |--> documentos<br>
-  &emsp;|--> IoT Doc<br>
-  &emsp;|--> Manual ed Instrução<br>
-|-->Source<br>
-  &emsp;|--> Anteriores<br>
-  &emsp;|--> arduino<br>
-  &emsp;|--> backend<br>
-  &emsp;|--> frontend<br>
+  &emsp;| --> outros <br>
+  &emsp;|--> T5_G1_V05_IoTDocument.docx<br>
+  &emsp;|--> T5_G1_V05_IoTDocument.pdf<br>
+  
+  &emsp;|--> T5_G1_V03_Manual de Instruções.docx<br>
+  &emsp;|--> T5_G1_V03_Manual de Instruções.pdf<br>
+|-->Src<br>
+  &emsp;|--> Backend<br>
+  &emsp;|--> Circuito<br>
+  &emsp;|--> Frontend<br>
 | readme.md<br>
 
 <b>Dentre os arquivos presentes na raiz do projeto, definem-se:</b>
@@ -44,9 +46,17 @@ O projeto está baseado em tecnologias voltadas para o hardware, como o uso das 
 
 <b>documentos:</b> contém as versões de Manual de Instrução para a instalação da aplicação IoT, além do documento oficial da solução, IoT Doc.
 
-<b>Source:</b> Possui o código fonte do projeto, tanto as conexão feitas para o hardware, quanto para a aplicação web desenvolvida.
+<b>Src:</b> Possui o código fonte do projeto, tanto as conexão feitas para o hardware, quanto para a aplicação web desenvolvida.
 
-## 📆 Histórico de lançamentos
+## 💻 Execução do projeto
+
+Um guia para a execução desse projeto pode ser encontrado no conteúdo do documento "Manual de Instruções", dentro da pasta "documentos".
+
+Se preferir, também é possível acessá-lo a partir do seguinte link:
+
+https://github.com/2022M4T5-Inteli/Arvorino/blob/main/Documentos/T5_G1_V03_Manual%20de%20Instru%C3%A7%C3%B5es.pdf
+
+## 🗃 Histórico de lançamentos
 
 * 21/10/2022
     *  Análise da indústria
@@ -85,4 +95,4 @@ O projeto está baseado em tecnologias voltadas para o hardware, como o uso das 
 ### A solução também está disponível em: <https://arvorino-3ugi.onrender.com>.
 
 ## 📋 Licença/License
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="#">Inteli, Antonio Nassar, João Moarques, Maria Luísa Maia, Marcos Moura, Priscila Falcão, Thomas Barton, Vitor Oliveira</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2022M4T5-Inteli/Arvorino">Arvorino</a> <a>by</a> <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/InteliProjects/.github/blob/main/profile/README.md">Inteli</a>, <a href="https://www.linkedin.com/in/antonio-angelo-teixeira-a70b781a7/"> Antonio Angelo Teixeira</a>, <a href="https://www.linkedin.com/in/arthur-fraige/">Arthur Fraige</a>, <a href="https://www.linkedin.com/in/patriciahonorato/">Patricia Honorato Moreira</a>, <a href="https://www.linkedin.com/in/priscila-falc%C3%A3o-3435a1244/">Priscila Falcão</a>, <a href="https://www.linkedin.com/in/raphael-lisboa/">Raphael Lisboa Antunes</a>, <a href="https://www.linkedin.com/in/sophia-de-oliveira-tosar-aba7ab23b/">Sophia de Oliveira Tosar</a>, <a href="https://www.linkedin.com/in/vitor-moura-de-oliveira-979002232/">Vitor Oliveira</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
